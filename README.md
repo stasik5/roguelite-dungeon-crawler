@@ -49,7 +49,7 @@ A procedurally generated roguelite dungeon crawler game built with vanilla HTML,
 
 Simply open `index.html` in a web browser. No installation required!
 
-Or play online at: [GitHub Pages URL will be added after deployment]
+Or play online at: https://stasik5.github.io/roguelite-dungeon-crawler/
 
 ## 🛠️ Tech Stack
 
