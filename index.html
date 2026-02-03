@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Crawler - Roguelite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🏰 Dungeon Crawler</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">❤️ HP:</span>
+                    <span id="health" class="stat-value">100</span>/<span id="max-health">100</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">⚔️ ATK:</span>
+                    <span id="attack" class="stat-value">10</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">🛡️ DEF:</span>
+                    <span id="defense" class="stat-value">5</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">📊 Level:</span>
+                    <span id="level" class="stat-value">1</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">💰 Gold:</span>
+                    <span id="gold" class="stat-value">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-main">
+            <div class="dungeon-container">
+                <div id="dungeon" class="dungeon"></div>
+            </div>
+
+            <div class="minimap-container">
+                <h3>🗺️ Minimap</h3>
+                <div id="minimap" class="minimap"></div>
+            </div>
+        </div>
+
+        <div class="game-sidebar">
+            <div class="inventory">
+                <h3>🎒 Inventory</h3>
+                <div id="inventory" class="inventory-grid"></div>
+            </div>
+
+            <div class="log">
+                <h3>📜 Log</h3>
+                <div id="log" class="log-container"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <h3>⌨️ Controls</h3>
+                <div class="control-buttons">
+                    <div class="control-row">
+                        <button class="control-btn" data-key="ArrowUp">↑</button>
+                    </div>
+                    <div class="control-row">
+                        <button class="control-btn" data-key="ArrowLeft">←</button>
+                        <button class="control-btn" data-key="ArrowDown">↓</button>
+                        <button class="control-btn" data-key="ArrowRight">→</button>
+                    </div>
+                </div>
+                <p>WASD or Arrow keys to move</p>
+            </div>
+            <button id="new-game" class="new-game-btn">🎮 New Game</button>
+        </div>
+    </div>
+
+    <div id="game-over" class="modal hidden">
+        <div class="modal-content">
+            <h2>💀 Game Over</h2>
+            <p>You have fallen in the dungeon...</p>
+            <p>Level reached: <span id="final-level">1</span></p>
+            <p>Gold collected: <span id="final-gold">0</span></p>
+            <button id="restart-btn" class="modal-btn">Try Again</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
